@@ -1,0 +1,6 @@
+framework module Pods_XTUtil_swift {
+  umbrella header "Pods-XTUtil-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

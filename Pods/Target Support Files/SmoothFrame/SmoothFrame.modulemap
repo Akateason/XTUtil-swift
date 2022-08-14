@@ -1,0 +1,6 @@
+framework module SmoothFrame {
+  umbrella header "SmoothFrame-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,43 @@
+PODS:
+  - HandyJSON (5.0.5)
+  - RxCocoa (6.5.0.2):
+    - RxRelay
+    - RxSwift
+  - RxGesture (4.0.4.1):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0.2):
+    - RxSwift
+  - RxSwift (6.5.0.2)
+  - SmoothFrame (1.0.0.1)
+  - SnapKit (5.6.1)
+
+DEPENDENCIES:
+  - HandyJSON
+  - RxGesture
+  - RxSwift
+  - SmoothFrame
+  - SnapKit
+
+SPEC REPOS:
+  https://gitee.com/mamba24xtc/xtspecs.git:
+    - HandyJSON
+    - RxCocoa
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - SmoothFrame
+    - SnapKit
+
+SPEC CHECKSUMS:
+  HandyJSON: 3dd68921679e71b4ca8ca513ce8e44a01b9c46eb
+  RxCocoa: 283b55ca34f32560b8c8c06842fb2f1b7e337480
+  RxGesture: f4d7d7f5b61b49219ff3efa7c2603dba172a5bc4
+  RxRelay: 0f4e7d9723570f248dfbfd9d1de5b78958a55957
+  RxSwift: 82d08eb4f339568f568c37c4e49102e1b1c2f945
+  SmoothFrame: 39acef643ae0cac3889b4a07ed0edee4af4b3876
+  SnapKit: 6e7b77d43cb33a245d1cc5011d6782ac09aad5b8
+
+PODFILE CHECKSUM: e0c70fc60bb9855a2845a66a395c9451131f2f5a
+
+COCOAPODS: 1.11.3

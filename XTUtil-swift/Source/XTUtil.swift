@@ -8,6 +8,8 @@
 import UIKit
 
 public class XTUtil: NSObject {
+    
+    /// 测量方法的时间
     public static func measure(f: ()->()) {
         let start = CACurrentMediaTime()
         f()
@@ -16,6 +18,8 @@ public class XTUtil: NSObject {
     }
 }
 
+
+/// print
 public func xtPrint<T>(_ message: T, fileName: String = #file, funcName: String = #function, lineNum : Int = #line) {
     #if DEBUG
         print("「 \((fileName as NSString).lastPathComponent) 第\(lineNum)行 \(funcName) 」\("\n")\(message)")

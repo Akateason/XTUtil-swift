@@ -12,7 +12,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'XTUtil-swift/Classes/**/*'
+  s.source_files = 'XTUtil-swift/XTUtil-swift/**/*'
 
   # s.resource_bundles = {
   #   'XTUtil-swift' => ['XTUtil-swift/Assets/*.png']

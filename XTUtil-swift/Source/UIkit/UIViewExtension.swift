@@ -34,20 +34,19 @@ extension UIView {
     
         
     // print results of internal apple API method 'recursiveDescription' to console
-    public func xt_dump() {
+    public func xt_dumpAllViewInfo() {
         Swift.print(perform(Selector(("recursiveDescription")))!)
     }
     
-    
-    
+        
     /// 给所有subview上进行相同的操作
     /// - Parameters:
     ///   - targetView: 目标view
     ///   - level: 当前层级
     ///   - excute: subview回调, 当前视图view, 当前层级lvl
     public func xt_operateWorkOnSubviews(targetView: inout UIView,
-                                      level: Int = 0,
-                                      excute: @escaping (_ view: inout UIView, _ lvl: Int) -> Void) {
+                                         level: Int = 0,
+                                         excute: @escaping (_ view: inout UIView, _ lvl: Int) -> Void) {
         excute(&targetView, level)
         
         for var subview in targetView.subviews {
@@ -60,49 +59,4 @@ extension UIView {
 
 
 
-// Mark: current window
-extension UIApplication {
-    var currentWindow: UIWindow? {
-        connectedScenes
-            .filter({$0.activationState == .foregroundActive})
-            .map({$0 as? UIWindowScene})
-            .compactMap({$0})
-            .first?.windows
-            .filter({$0.isKeyWindow}).first
-    }
-    
-    var keyWindow: UIWindow? {
-        UIApplication.shared.windows.first { $0.isKeyWindow }
-    }
-}
 
-
-
-// Mark: current VC
-extension XTUtil {
-    // 最顶部VC
-    class func topMostVC(base: UIViewController? = UIApplication.shared.currentWindow?.rootViewController) -> UIViewController? {
-        if let nav = base as? UINavigationController {
-            return topMostVC(base: nav.visibleViewController)
-        }
-        
-        if let tab = base as? UITabBarController {
-            let moreNavigationController = tab.moreNavigationController
-            
-            if let top = moreNavigationController.topViewController, top.view.window != nil {
-                return topMostVC(base: top)
-            } else if let selected = tab.selectedViewController {
-                return topMostVC(base: selected)
-            }
-        }
-        
-        if let presented = base?.presentedViewController {
-            return topMostVC(base: presented)
-        }
-        
-        return base
-    }
-    
-    
-    
-}
